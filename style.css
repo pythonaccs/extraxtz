@@ -709,3 +709,47 @@ body.light .suggestion-form textarea {
     padding: 25px 15px;
   }
 }
+/* =========================
+   WATERMARK
+========================= */
+
+body::after {
+  content: "dtb.extraxtz";
+
+  position: fixed;
+
+  bottom: 18px;
+  right: 22px;
+
+  font-size: .85rem;
+
+  letter-spacing: 1px;
+
+  color: rgba(212,175,55,.22);
+
+  font-family: Georgia, serif;
+
+  pointer-events: none;
+
+  z-index: 9999;
+
+  user-select: none;
+
+  text-shadow:
+    0 0 10px rgba(212,175,55,.08);
+
+  transition: .3s;
+}
+
+body.light::after {
+  color: rgba(120,90,20,.18);
+}
+
+@media (max-width: 768px) {
+
+  body::after {
+    font-size: .72rem;
+    bottom: 12px;
+    right: 14px;
+  }
+}
