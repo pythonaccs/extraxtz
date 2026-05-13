@@ -31,7 +31,7 @@ body {
   min-height: 100vh;
 
   background:
-    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
+    linear-gradient(rgba(0,0,0,.78), rgba(0,0,0,.88)),
     url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee")
     center/cover;
 
@@ -120,7 +120,7 @@ nav h2 {
 }
 
 .hero-content h1 {
-  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-size: clamp(2.8rem, 7vw, 5rem);
 
   color: #fff;
 
@@ -166,33 +166,40 @@ main {
 }
 
 /* =========================
-   DAILY VERSE
+   DAILY
 ========================= */
 
 .daily {
-  background: linear-gradient(135deg, #1b1b1b, #2b2412);
+  background:
+    linear-gradient(
+      135deg,
+      #161616,
+      #2a230f
+    );
 
   border: 1px solid #d4af37;
 
-  padding: 35px;
+  padding: 40px;
 
-  border-radius: 20px;
+  border-radius: 25px;
 
   text-align: center;
 
-  margin-bottom: 60px;
+  margin-bottom: 70px;
 
-  box-shadow: 0 0 25px rgba(212,175,55,.15);
+  box-shadow:
+    0 0 30px rgba(212,175,55,.08);
 }
 
 .daily h2 {
   color: #d4af37;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  font-size: 2rem;
 }
 
 .daily .verse {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
+  font-size: 1.35rem;
+  margin-bottom: 12px;
 }
 
 /* =========================
@@ -208,9 +215,9 @@ main {
 
   border: none;
 
-  padding: 12px 20px;
+  padding: 12px 22px;
 
-  border-radius: 20px;
+  border-radius: 30px;
 
   cursor: pointer;
 
@@ -220,7 +227,7 @@ main {
 }
 
 .random-btn:hover {
-  transform: scale(1.05);
+  transform: translateY(-2px) scale(1.03);
 }
 
 /* =========================
@@ -250,11 +257,16 @@ main {
 }
 
 .portal-card {
-  background: linear-gradient(135deg, #111, #211a08);
+  background:
+    linear-gradient(
+      135deg,
+      #111,
+      #211a08
+    );
 
   border: 1px solid #d4af37;
 
-  border-radius: 20px;
+  border-radius: 22px;
 
   padding: 30px;
 
@@ -272,11 +284,11 @@ main {
 }
 
 .portal-card:hover {
-  transform: translateY(-7px) scale(1.02);
+  transform: translateY(-7px);
 
   box-shadow:
-    0 0 25px rgba(212,175,55,.2),
-    0 0 60px rgba(212,175,55,.08);
+    0 0 25px rgba(212,175,55,.18),
+    0 0 50px rgba(212,175,55,.08);
 }
 
 .portal-card h3 {
@@ -333,7 +345,7 @@ main {
 .topic {
   margin-bottom: 18px;
 
-  border-radius: 15px;
+  border-radius: 18px;
 
   overflow: hidden;
 
@@ -351,7 +363,7 @@ main {
 
   color: #f5f1e8;
 
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 
   text-align: left;
 
@@ -372,7 +384,7 @@ main {
 .topic-content {
   display: none;
 
-  padding: 20px;
+  padding: 22px;
 
   background: #101010;
 }
@@ -390,11 +402,11 @@ main {
 
   border-left: 4px solid #d4af37;
 
-  padding: 20px;
+  padding: 22px;
 
   margin-bottom: 18px;
 
-  border-radius: 10px;
+  border-radius: 14px;
 }
 
 .verse-card h3 {
@@ -416,7 +428,12 @@ main {
 ========================= */
 
 .song-card {
-  background: linear-gradient(135deg, #111, #211a08);
+  background:
+    linear-gradient(
+      135deg,
+      #111,
+      #211a08
+    );
 
   border: 1px solid #d4af37;
 }
@@ -460,6 +477,87 @@ main {
   white-space: pre-wrap;
 
   font-family: "Courier New", monospace;
+}
+
+/* =========================
+   SUGGESTION FORM
+========================= */
+
+.suggestion-section {
+  max-width: 1000px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  position: relative;
+}
+
+.suggestion-form {
+  width: 100%;
+  max-width: 700px;
+
+  margin: 35px auto 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.suggestion-form input,
+.suggestion-form textarea {
+  width: 100%;
+
+  padding: 16px 18px;
+
+  border-radius: 16px;
+
+  border: 1px solid rgba(212,175,55,.55);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(20,20,20,.95),
+      rgba(35,28,12,.92)
+    );
+
+  color: #f5f1e8;
+
+  font-size: 1rem;
+
+  font-family: Georgia, serif;
+
+  outline: none;
+
+  transition: .3s;
+}
+
+.suggestion-form textarea {
+  min-height: 170px;
+
+  resize: vertical;
+}
+
+.suggestion-form input:focus,
+.suggestion-form textarea:focus {
+  border-color: #d4af37;
+
+  box-shadow:
+    0 0 18px rgba(212,175,55,.18),
+    0 0 40px rgba(212,175,55,.08);
+}
+
+.suggestion-form input::placeholder,
+.suggestion-form textarea::placeholder {
+  color: #aaa;
+}
+
+.suggestion-form button {
+  width: fit-content;
+
+  align-self: center;
+
+  padding: 14px 38px;
 }
 
 /* =========================
@@ -516,8 +614,14 @@ body.light #searchInput {
   color: black;
 }
 
+body.light .suggestion-form input,
+body.light .suggestion-form textarea {
+  background: white;
+  color: #111;
+}
+
 /* =========================
-   MOBILE RESPONSIVE
+   MOBILE
 ========================= */
 
 @media (max-width: 768px) {
@@ -545,7 +649,7 @@ body.light #searchInput {
   }
 
   .hero-content h1 {
-    font-size: 2.6rem;
+    font-size: 2.7rem;
   }
 
   .hero-content p {
@@ -558,7 +662,7 @@ body.light #searchInput {
   }
 
   .daily {
-    padding: 25px 18px;
+    padding: 28px 20px;
   }
 
   .daily .verse {
@@ -571,7 +675,6 @@ body.light #searchInput {
 
   .portal-card {
     min-height: auto;
-    padding: 25px;
   }
 
   .topics h2,
@@ -584,10 +687,6 @@ body.light #searchInput {
     padding: 18px;
   }
 
-  .verse-card {
-    padding: 16px;
-  }
-
   .song-header {
     flex-direction: column;
     align-items: flex-start;
@@ -597,13 +696,12 @@ body.light #searchInput {
     width: 100%;
   }
 
-  .chord-box {
-    padding: 15px;
-  }
-
   .chord-box pre {
     font-size: .85rem;
-    line-height: 1.7;
+  }
+
+  .suggestion-form button {
+    width: 100%;
   }
 
   footer {
